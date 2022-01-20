@@ -1,0 +1,793 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Monoton&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 3em !important;
+  margin-bottom: 30px;
+}
+@media (max-width:991px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: auto;
+}
+@media (max-width:767px) {
+  .container {
+    padding: 30px;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .container {
+    width: 800px;
+  }
+}
+@media (min-width:992px) and (max-width:1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+@media (min-width:1201px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.viewAll {
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  color: #707070;
+}
+.viewAll i {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.viewAll::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #707070;
+}
+
+.share {
+  margin-top: 80px;
+  text-align: center;
+}
+.share .icons {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+.share .icons .icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  transition: all 0.5s linear;
+}
+.share .icons i {
+  margin-left: 20px;
+  font-size: 1.3em;
+  color: #707070;
+  margin-bottom: 10px;
+}
+.share .viewAll i {
+  position: absolute;
+  margin-left: 15px;
+}
+
+.corner {
+  position: absolute;
+  width: 50%;
+  height: 81%;
+  top: 33%;
+  right: 27%;
+  z-index: 1;
+  border: 1px solid #757575;
+}
+@media (max-width:767px) {
+  .corner {
+    display: none;
+  }
+}
+.corner span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+}
+.corner span.bottom_left {
+  left: 0;
+  bottom: 0;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.corner span.bottom_right {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.corner span.top_left {
+  top: 0;
+  left: 0;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.corner span.top_right {
+  top: 0;
+  right: 0;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.main_txt {
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  bottom: 0;
+}
+@media (max-width:767px) {
+  .main_txt {
+    width: 100%;
+    top: 74%;
+    left: 54%;
+    z-index: 4;
+  }
+}
+.main_txt div {
+  background: url("../../img/discover.png");
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  padding: 24px 30px 30px 0;
+  display: flex;
+  justify-content: initial;
+  align-items: center;
+}
+@media (max-width:767px) {
+  .main_txt div {
+    padding-right: 58px;
+  }
+}
+.main_txt div i {
+  color: white;
+  border: 1px solid #b1323c;
+  padding: 15px;
+  margin: 0 12px 0 -15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.main_txt div h3 {
+  color: white;
+  font-weight: 900;
+  line-height: 1.5;
+}
+@media (max-width:767px) {
+  .main_txt div h3 {
+    font-size: 20px;
+  }
+}
+.main_txt div h3 p {
+  font-size: 13px;
+}
+
+.main_img {
+  width: 60%;
+  position: relative;
+  z-index: 4;
+}
+@media (max-width:767px) {
+  .main_img {
+    width: 150%;
+    display: none;
+  }
+}
+
+.small_img {
+  display: none;
+}
+@media (max-width:767px) {
+  .small_img {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
+.red {
+  width: 100%;
+  padding-top: 7.5%;
+  background-color: #b1323c;
+  margin-bottom: 20px;
+}
+@media (max-width:767px) {
+  .red {
+    padding-top: 13.5%;
+  }
+}
+
+.blue {
+  width: 100%;
+  padding-top: 12.5%;
+  background-color: #29a3fb;
+}
+@media (max-width:767px) {
+  .blue {
+    padding-top: 20%;
+  }
+}
+
+header {
+  padding: 10px 20px;
+}
+header.top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: white;
+  transition: all 0.5s linear;
+  filter: drop-shadow(3px 2px 2px #01428c);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav_icon {
+  cursor: pointer;
+}
+header nav .nav_icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: #707070;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+header nav .nav_icon span:first-of-type {
+  margin-top: 0;
+}
+header nav .nav_icon.toggle_nav span:first-of-type {
+  transform: rotate(45deg) translate(1px, 4px);
+}
+header nav .nav_icon.toggle_nav span:nth-of-type(2) {
+  display: none;
+}
+header nav .nav_icon.toggle_nav span:last-of-type {
+  transform: rotate(-45deg) translate(1px, -4px);
+}
+header nav img {
+  width: initial;
+}
+header nav .location {
+  display: flex;
+}
+@media (max-width:991px) {
+  header nav .location p {
+    display: none;
+  }
+}
+header nav .location i {
+  margin-left: 10px;
+}
+
+.navigator {
+  position: fixed;
+  width: 100%;
+  top: 65px;
+  z-index: 100;
+  left: 0;
+  height: 100vh;
+  padding: 50px;
+  transition: all 0.5s ease;
+  background: url("https://www.bugatti.com/fileadmin/_processed_/sei/nav/se-image-b967a56a304f615df7b4600bd9d56e31.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width:767px) {
+  .navigator {
+    background: url("https://www.bugatti.com/fileadmin/_processed_/sei/nav/se-image-fe3d498aa93c353f2dc9285c0f02c428.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.navigator.show_hide_nav {
+  opacity: 0;
+  z-index: -1;
+  animation: hide_show 0.1s forwards;
+}
+@keyframes hide_show {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+.navigator ul li {
+  margin-top: 15px;
+}
+.navigator ul li a {
+  display: flex;
+  align-items: center;
+  color: #707070;
+  font-weight: 900;
+  font-size: 4em;
+  transition: all 0.5s linear;
+}
+@media (max-width:1200px) {
+  .navigator ul li a {
+    display: block;
+    font-size: 2em;
+  }
+}
+.navigator ul li a:hover {
+  color: white;
+}
+.navigator ul li a ul {
+  display: flex;
+  font-size: 19px;
+  margin-left: 20px;
+  width: 0px;
+  overflow: hidden;
+  transition: all 0.7s linear;
+}
+@media (max-width:1200px) {
+  .navigator ul li a ul {
+    flex-direction: column;
+    font-size: 15px;
+    height: 0px;
+  }
+}
+.navigator ul li a ul li {
+  margin-left: 10px;
+}
+.navigator ul li a ul li:hover {
+  text-decoration: underline;
+}
+.navigator ul li a:hover ul {
+  width: 100%;
+}
+@media (max-width:1200px) {
+  .navigator ul li a:hover ul {
+    height: 160px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: black;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .foot_icons {
+  color: white;
+}
+footer .foot_icons i {
+  margin-left: 20px;
+  cursor: pointer;
+}
+footer p {
+  color: #707070;
+  margin: 30px 0;
+  font-size: 12px;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+footer ul li {
+  margin: 0 15px;
+  padding: 15px 0;
+}
+footer ul li a {
+  color: #707070;
+  font-size: 12px;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/******** bannner *************/
+.banner {
+  position: relative;
+  padding-bottom: 50px;
+  height: 100vh;
+}
+@media (max-width:767px) {
+  .banner {
+    background: url("https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-92001dc67dd4e4cd715fe9fd4a417a17.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .banner {
+    background: url("https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-2e237d8f12f175946854eddb982b9f8d.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width:992px) and (max-width:1200px) {
+  .banner {
+    background: url("https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-2e237d8f12f175946854eddb982b9f8d.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width:1201px) {
+  .banner {
+    background: url("https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-b40d6034c325ce3bf50035ad5f958a75.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.banner .container {
+  padding: 50px 30px;
+}
+.banner .container .heading {
+  color: white;
+}
+.banner .container .heading h1 {
+  margin-bottom: 50px;
+  font-size: 4em;
+}
+@media (max-width:767px) {
+  .banner .container .heading h1 {
+    font-size: 2em;
+  }
+}
+.banner .container .heading p {
+  margin-bottom: 30px;
+  line-height: 1.2;
+  font-size: 1.2em;
+}
+.banner .container .heading button {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.banner .container .heading button:hover {
+  background-color: white;
+  color: black;
+}
+
+/************ models section ******************/
+.univers .images div .title, .models .content .box2 .title, .models .content .box1 .model_1 .title, .models .content .box1 .model_2 .title {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  transition: all 0.5s linear;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+  background-color: rgba(12, 12, 12, 0.274);
+}
+
+.univers .images div, .models .content .box2, .models .content .box1 .model_1, .models .content .box1 .model_2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.models {
+  margin-top: 60px;
+}
+.models .content {
+  display: grid;
+  grid-template-columns: 32% 66%;
+  column-gap: 1%;
+}
+@media (max-width:767px) {
+  .models .content {
+    grid-template-columns: 100%;
+  }
+}
+.models .content .box1 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2%;
+}
+@media (max-width:767px) {
+  .models .content .box1 {
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+  }
+}
+@media (max-width:767px) {
+  .models .content .box1 {
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+.models .content .box1 .model_1:hover .title, .models .content .box1 .model_2:hover .title {
+  bottom: 5px;
+}
+.models .content .box2:hover .title {
+  bottom: 5px;
+}
+
+/************ univers ***************/
+.univers {
+  margin-top: 70px;
+}
+.univers .images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%;
+}
+@media (max-width:767px) {
+  .univers .images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.univers .images div .title {
+  bottom: 6px;
+}
+
+/********************** news ****************/
+.news {
+  margin-top: 60px;
+}
+@media (min-width:1201px) {
+  .news .img_small_screen {
+    display: none;
+  }
+}
+.news .top_news {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width:1201px) {
+  .news .top_news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.news .top_news .img_large_screen {
+  display: none;
+}
+@media (min-width:1201px) {
+  .news .top_news .img_large_screen {
+    display: block;
+  }
+}
+@media (max-width:1200px) {
+  .news .top_news h4 {
+    margin-bottom: 30px;
+  }
+}
+.news .news_content {
+  padding-top: 50px;
+  margin-left: 20px;
+}
+.news .news_content span {
+  color: #707070;
+  font-size: 14px;
+}
+.news .news_content h2 {
+  margin: 10px 0 25px 0;
+}
+.news .news_content p {
+  color: #707070;
+  margin: 20px 0;
+  font-size: 17px;
+}
+.news .news_content h4 {
+  color: #707070;
+  font-weight: 500;
+}
+@media (min-width:1201px) {
+  .news .news_content h4 {
+    margin-top: 30%;
+  }
+}
+.news .news_content h4 i {
+  margin-left: 15px;
+}
+.news .other_news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (max-width:1200px) {
+  .news .other_news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.news .other_news .info {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (max-width:1200px) {
+  .news .other_news .info {
+    margin: 5px 0;
+  }
+}
+@media (max-width:767px) {
+  .news .other_news .info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width:768px) and (max-width:1200px) {
+  .news .other_news .info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width:1201px) {
+  .news .other_news .info img {
+    margin-bottom: 20px;
+  }
+}
+.news .other_news .info .text {
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+  flex-direction: column;
+  padding-left: 30px;
+}
+@media (max-width:767px) {
+  .news .other_news .info .text {
+    padding-left: 0px;
+  }
+}
+.news .other_news .info .text p {
+  color: #707070;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+/******************* social *******************/
+.social {
+  margin-top: 70px;
+}
+.social .social_boxs {
+  display: grid;
+  margin-bottom: 60px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width:767px) {
+  .social .social_boxs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .social .social_boxs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width:992px) and (max-width:1200px) {
+  .social .social_boxs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width:1201px) {
+  .social .social_boxs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.social .social_boxs .box {
+  position: relative;
+}
+.social .social_boxs .box .txt_icon {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 1.5em;
+  z-index: 8;
+}
+.social .social_boxs .box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: rgba(24, 23, 23, 0.74);
+  display: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+.social .social_boxs .box:hover .overlay {
+  display: flex;
+  justify-content: initial;
+  align-items: flex-end;
+}
+.social .viewAll i {
+  margin-left: 15px;
+}
+
+/************************ share *****************/
+.share {
+  margin-top: 80px;
+  text-align: center;
+}
+.share .icons {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+.share .icons .icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  transition: all 0.5s linear;
+}
+.share .icons i {
+  margin-left: 20px;
+  font-size: 1.3em;
+  color: #707070;
+  margin-bottom: 10px;
+}
+.share .viewAll i {
+  margin-left: 15px;
+}
